@@ -26,5 +26,5 @@ class chessGame:
         for row in chessGame.CreateBoard():
             print(row)
 
-print(chessGame.CreateBoard())
+print(chessGame.PrintBoard())
 
