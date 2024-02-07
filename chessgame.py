@@ -44,6 +44,10 @@ class chessGame:
         board[7] = blackTeam[0]
 
         return board
+    
+    def ValidMove():
+        
+
         
 # print(chessGame.CreateBoard())
 print(chessGame.CreateTeam())
