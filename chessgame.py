@@ -29,7 +29,6 @@ class chessGame:
     def CreateTeam():
         board = chessGame.CreateBoard()
 
-<<<<<<< HEAD
         whiteTeam = []
         whiteTeam.append([chessGame.Type.WTOWER.value,chessGame.Type.WRIDER.value,chessGame.Type.WCRAZY.value,chessGame.Type.WQUEEN.value,chessGame.Type.WKING.value,chessGame.Type.WCRAZY.value,chessGame.Type.WRIDER.value,chessGame.Type.WTOWER.value])
         whiteTeam.append([chessGame.Type.WPAWN.value]*8)
@@ -53,7 +52,4 @@ class chessGame:
 print(chessGame.CreateBoard())
 print(chessGame.CreateTeam())
 
-=======
-print(chessGame.PrintBoard())
->>>>>>> dce204cbabead11096e8e549d657e123d5dd4a18
 
