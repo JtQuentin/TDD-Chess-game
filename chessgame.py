@@ -45,6 +45,7 @@ class chessGame:
         self._board[7] = blackTeam[0]
 
         return self._board
+
         
 chessgame = chessGame 
 print(chessgame.CreateBoard(chessgame))
