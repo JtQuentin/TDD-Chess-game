@@ -14,13 +14,17 @@ class chessGame:
         WTOWER = '♖'
         WCRAZY = '♗'
         WPAWN = '♙'
-        
-    # def CreatePion(value):
-    #     pion = []
-    #     if(value == 0):
-    #         pion = [Type.WKING, "♞", "♝", "♛", "♚", "♝", "♞", "♜", "♟", "♟", "♟", "♟", "♟", "♟", "♟", "♟"]
-    #     elif(value == 1):
-    #         pion = ["♙", "♙", "♙", "♙", "♙", "♙", "♙", "♙", "♖", "♘", "♗", "♕", "♔", "♗", "♘", "♖"]
-    #     else:
-    #         return None
-    #     return pion
+    
+    def CreateBoard():
+        board = []
+        for _ in range(8):
+            row = [' '] *8
+            board.append(row) 
+        return board
+
+    def PrintBoard():
+        for row in chessGame.CreateBoard():
+            print(row)
+
+print(chessGame.CreateBoard())
+
