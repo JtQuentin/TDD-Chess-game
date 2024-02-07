@@ -1,7 +1,8 @@
+import pytest
 from chessgame import chessGame
 
-class Chesstest:
-    def test_ShowPion():
+class TestChess:
+    def test_show_pion(self):
         assert chessGame.Type.BCRAZY.value == '♝'
         assert chessGame.Type.BKING.value == '♚'
         assert chessGame.Type.BPAWN.value == '♟'
@@ -15,5 +16,15 @@ class Chesstest:
         assert chessGame.Type.WRIDER.value == '♘'
         assert chessGame.Type.WTOWER.value == '♖'
 
-    def testCreateBoard():
-        assert chessGame.CreateBoard == [[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ']]
+    def test_create_board(self):
+        assert len(chessGame.CreateBoard()) == 8
+        for row in chessGame.CreateBoard():
+            assert len(row) == 8
+
+    def test_initial_state(self):
+        for row in chessGame.CreateBoard():
+            for cell in row:
+                assert cell == ' '
+
+if __name__ == '__main__':
+    pytest.main([__file__])
