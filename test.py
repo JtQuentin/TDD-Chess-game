@@ -25,6 +25,13 @@ class TestChess:
         for row in chessGame.CreateBoard():
             for cell in row:
                 assert cell == ' '
+    
+    def test_create_team(self):
+        assert chessGame.CreateTeam()[0] == ['♖', '♘', '♗', '♕', '♔', '♗', '♘', '♖']
+        assert chessGame.CreateTeam()[1] == ['♙', '♙', '♙', '♙', '♙', '♙', '♙', '♙']   
+        assert chessGame.CreateTeam()[6] == ['♟', '♟', '♟', '♟', '♟', '♟', '♟', '♟']
+        assert chessGame.CreateTeam()[7] == ['♜', '♞', '♝', '♛', '♚', '♝', '♞', '♜'] 
+
 
 if __name__ == '__main__':
     pytest.main([__file__])

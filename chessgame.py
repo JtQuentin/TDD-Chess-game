@@ -40,16 +40,12 @@ class chessGame:
         blackTeam.append([chessGame.Type.BTOWER.value,chessGame.Type.BRIDER.value,chessGame.Type.BCRAZY.value,chessGame.Type.BQUEEN.value,chessGame.Type.BKING.value,chessGame.Type.BCRAZY.value,chessGame.Type.BRIDER.value,chessGame.Type.BTOWER.value])
         blackTeam.append([chessGame.Type.BPAWN.value]*8)
 
-        board[6] = blackTeam[0]
-        board[7] = blackTeam[1]
+        board[6] = blackTeam[1]
+        board[7] = blackTeam[0]
 
         return board
- 
-
-
-
         
-print(chessGame.CreateBoard())
+# print(chessGame.CreateBoard())
 print(chessGame.CreateTeam())
 
 
